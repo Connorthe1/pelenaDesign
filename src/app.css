@@ -4,10 +4,10 @@
 
 body {
     --step: 32px;
-    background: white;
+    background-color: #11151c;
     border: 80px solid rgba(0, 0, 0, 0.95);
     height: 100svh;
-    background: url("./assets/433ce90bd4fd4a0a94116c8df3d098a9.jpg");
+    /*background: url("./assets/433ce90bd4fd4a0a94116c8df3d098a9.jpg");*/
     background-size: 50%;
     background-repeat: repeat;
     background-position: center;

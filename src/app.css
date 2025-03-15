@@ -2,16 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    --step: 32px;
-    background-color: #11151c;
-    border: 80px solid rgba(0, 0, 0, 0.95);
+.glass {
+    border: 80px solid #0d0d0d;
     height: 100svh;
-    /*background: url("./assets/433ce90bd4fd4a0a94116c8df3d098a9.jpg");*/
-    background-size: 50%;
-    background-repeat: repeat;
-    background-position: center;
     position: relative;
     overflow: hidden;
+}
+
+.shadow-letter:hover {
 }
 

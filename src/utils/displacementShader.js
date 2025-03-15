@@ -60,33 +60,32 @@ varying vec2 vUv;
 
 uniform vec3 color1;
 uniform vec3 color2;
+uniform vec3 color3;
 uniform float noiseStrength;
-
-float random(vec2 st) {
-    return fract(sin(dot(st.xy, vec2(12.9898, 78.233))) * 43758.5453123);
-}
-
-float noise(vec2 st) {
-    vec2 i = floor(st);
-    vec2 f = fract(st);
-
-    // Four corners in 2D of a tile
-    float a = random(i);
-    float b = random(i + vec2(1.0, 0.0));
-    float c = random(i + vec2(0.0, 1.0));
-    float d = random(i + vec2(1.0, 1.0));
-
-    vec2 u = f * f * (3.0 - 2.0 * f);
-
-    return mix(a, b, u.x) +
-           (c - a) * u.y * (1.0 - u.x) +
-           (d - b) * u.x * u.y;
-}
+uniform float time;
 
 void main() {
-    vec3 gradient = mix(color1, color2, vUv.y);
-    float n = noise(vUv * 10.0) * noiseStrength;
-    gl_FragColor = vec4(gradient + vec3(n), 1.0);
+    // Анимация через time
+    float waveSpeed = 0.5; // Скорость анимации
+    float baseFrequency = 2.0; // Базовая частота волн
+    float baseAmplitude = 0.5; // Базовая амплитуда волн
+
+    // Изменение толщины и высоты волн по оси X
+    float frequency = baseFrequency + vUv.x * 5.0; // Частота увеличивается по оси X
+    float amplitude = baseAmplitude + vUv.x * 0.5; // Амплитуда увеличивается по оси X
+
+    // Создание волнообразного эффекта
+    float wave = sin(vUv.x * frequency + time * waveSpeed) * amplitude;
+
+    // Смешивание цветов на основе волн и шума
+    float threshold = 0.5; // Порог для резкого перехода
+    float t1 = smoothstep(threshold - 0.3, threshold + 0.3, vUv.y + wave);
+    float t2 = smoothstep(0.9, 1.8, vUv.y + wave);
+    vec3 gradient = mix(color1, color2, t1);
+    gradient = mix(gradient, color3, t2);
+
+    // Установка цвета пикселя
+    gl_FragColor = vec4(gradient, 1.0);
 }
 `;
 

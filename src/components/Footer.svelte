@@ -16,22 +16,22 @@
                 <img src="src/assets/FW-SHAPE-69.png" class="filter invert w-10" alt="">
             </div>
         </div>
-        <ul class="text-2xl justify-self-center">
+        <ul class="text-2xl justify-self-end">
             <li class="flex gap-6">
                 <span>01.</span>
-                <a href="" class="hover:italic">LINK 1</a>
+                <a href="" class="hover:italic">TELEGRAM</a>
             </li>
             <li class="flex gap-6">
                 <span>02.</span>
-                <a href="" class="hover:italic">LINK 2</a>
+                <a href="" class="hover:italic">LINKEDIN</a>
             </li>
             <li class="flex gap-6">
                 <span>03.</span>
-                <a href="" class="hover:italic">LINK 3</a>
+                <a href="" class="hover:italic">MAIL</a>
             </li>
             <li class="flex gap-6">
                 <span>04.</span>
-                <a href="" class="hover:italic">LINK 4</a>
+                <a href="" class="hover:italic">HEADHUNTER</a>
             </li>
         </ul>
         <div class="text-right">

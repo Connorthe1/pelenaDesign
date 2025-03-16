@@ -2,13 +2,89 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    @font-face {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-display: swap;
+        font-weight: 300;
+        src: url(src/assets/fonts/Nunito-Light.ttf) format('truetype');
+    }
+    @font-face {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-display: swap;
+        font-weight: 400;
+        src: url(src/assets/fonts/Nunito-Regular.ttf) format('truetype');
+    }
+    @font-face {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-display: swap;
+        font-weight: 600;
+        src: url(src/assets/fonts/Nunito-SemiBold.ttf) format('truetype');
+    }
+    @font-face {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-display: swap;
+        font-weight: 700;
+        src: url(src/assets/fonts/Nunito-Bold.ttf) format('truetype');
+    }
+    @font-face {
+        font-family: 'Nunito';
+        font-style: italic;
+        font-display: swap;
+        font-weight: 300;
+        src: url(src/assets/fonts/Nunito-LightItalic.ttf) format('truetype');
+    }
+    @font-face {
+        font-family: 'Nunito';
+        font-style: italic;
+        font-display: swap;
+        font-weight: 400;
+        src: url(src/assets/fonts/Nunito-Italic.ttf) format('truetype');
+    }
+    @font-face {
+        font-family: 'Nunito';
+        font-style: italic;
+        font-display: swap;
+        font-weight: 600;
+        src: url(src/assets/fonts/Nunito-SemiBoldItalic.ttf) format('truetype');
+    }
+    @font-face {
+        font-family: 'Nunito';
+        font-style: italic;
+        font-display: swap;
+        font-weight: 700;
+        src: url(src/assets/fonts/Nunito-BoldItalic.ttf) format('truetype');
+    }
+}
+
+.type-line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px; /* Ширина границы */
+    height: 100%;
+    background-color: #ffffff; /* Цвет границы */
+}
+.line-blinking::after {
+    animation: blink-anim 1s steps(1, end) infinite;
+}
+@keyframes blink-anim {
+    0% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 0;
+    }
+}
 .glass {
     border: 80px solid #0d0d0d;
     height: 100svh;
     position: relative;
     overflow: hidden;
-}
-
-.shadow-letter:hover {
 }
 

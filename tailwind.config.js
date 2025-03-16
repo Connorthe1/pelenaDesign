@@ -2,6 +2,9 @@
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
+    fontFamily: {
+      'sans': ['Nunito', 'sans-serif'],
+    },
     extend: {
       colors: {
         mainBlack: '#0d0d0d',

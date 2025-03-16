@@ -1,6 +1,5 @@
 <script>
 import Background from "./Background.svelte";
-import ContactBtn from "./ContactBtn.svelte";
 </script>
 
 <section class="glass">

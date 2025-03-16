@@ -6,6 +6,7 @@
     import Footer from "../components/Footer.svelte";
     import Navigation from "../components/Navigation.svelte";
     import TypingEffectBlock from "../components/TypingEffectBlock.svelte";
+    import ContactBlock from "../components/ContactBlock.svelte";
 </script>
 
 <Navigation />
@@ -31,6 +32,7 @@
         <h1 class="text-white text-[60px] px-[80px] mt-12">
             <div class="flex gap-4">CREATING NEW <TypingEffectBlock /> FROM SCRATCH</div>
         </h1>
+        <ContactBlock />
         <h2 class="text-white text-[32px] px-[80px] mt-4">Design and Front-End</h2>
 
         <div class="grid p-[1px] gap-[1px] grid-cols-3 bg-white mx-[80px] mt-8">

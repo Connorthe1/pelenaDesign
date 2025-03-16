@@ -4,10 +4,12 @@ export default {
   theme: {
     fontFamily: {
       'sans': ['Nunito', 'sans-serif'],
+      'roboto': ['Roboto', 'sans-serif'],
     },
     extend: {
       colors: {
         mainBlack: '#0d0d0d',
+        blackElem: '#111111',
         white: '#ededed',
       }
     },

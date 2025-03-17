@@ -1,4 +1,4 @@
-<section class="h-svh bg-black bg-opacity-95 py-2 gap-4 relative flex flex-col items-center justify-between text-white">
+<section class="h-svh bg-black bg-opacity-95 py-2 gap-4 relative flex flex-col items-center justify-between text-white bg-dots">
     <div></div>
     <a href="" class="text-white text-[100px] flex items-center gap-16 hover:italic">
         <span class="leading-none">ABOUT ME</span>
@@ -27,11 +27,11 @@
             </li>
             <li class="flex gap-6">
                 <span>03.</span>
-                <a href="" class="hover:italic">MAIL</a>
+                <a href="" class="hover:italic">EMAIL</a>
             </li>
             <li class="flex gap-6">
                 <span>04.</span>
-                <a href="" class="hover:italic">HEADHUNTER</a>
+                <a href="" class="hover:italic">RESUME</a>
             </li>
         </ul>
         <div class="text-right">
@@ -43,3 +43,6 @@
         <img src="src/assets/FW-SHAPE-38.svg" class="absolute bottom-4 left-4 h-24" alt="">
     </div>
 </section>
+
+<style>
+</style>

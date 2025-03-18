@@ -6,11 +6,11 @@ import ShuffeledWord from "./ShuffeledWord.svelte";
 <div class="text-xl flex flex-col gap-4 py-8 px-12 font-roboto text-white mt-4 relative overflow-clip tracking-widest rounded-md mx-[80px] bg-dots-clear">
     <p class="text-xs opacity-50">CONTACTS</p>
     <div class="custom-dotted-border pl-8 py-4 flex flex-col gap-8">
-        <p>TELEGRAM: <a href="" class="font-thin text-lg text-pink-300 shadow-text"><ShuffeledWord text="@pelena_design"/></a></p>
-        <p>EMAIL: <a href="" class="font-thin text-lg text-emerald-300"><ShuffeledWord text="pelena_design@gmail.com"/></a></p>
-        <p>LINKEDIN: <a href="" class="font-thin text-lg text-emerald-300"><ShuffeledWord text="pelena_design"/></a> </p>
+        <p>TELEGRAM: <a href="https://t.me/connorthe1" class="font-thin text-lg text-pink-300 shadow-text"><ShuffeledWord text="@connorthe1"/></a></p>
+        <p>EMAIL: <a href="mailto:andrew_muller@vk.com" class="font-thin text-lg text-emerald-300"><ShuffeledWord text="andrew_muller@vk.com"/></a></p>
+        <p>LINKEDIN: <a href="https://www.linkedin.com/in/andrew-melnik/" class="font-thin text-lg text-emerald-300"><ShuffeledWord text="andrew-melnik"/></a> </p>
     </div>
-    <img src="src/assets/3D%20Abstract3_%20(9).png" class="absolute right-[80px] -bottom-20 h-64" alt="">
+    <img src="/assets/3D%20Abstract3_%20(9).png" class="absolute right-[80px] -bottom-20 h-64" alt="">
     <div class="absolute right-0 top-0 h-full flex flex-col">
         <div class="w-1 bg-pink-600 flex-1"></div>
         <div class="w-1 bg-teal-600 flex-1"></div>

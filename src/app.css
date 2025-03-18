@@ -8,59 +8,61 @@
         font-style: normal;
         font-display: swap;
         font-weight: 300;
-        src: url(src/assets/fonts/Nunito-Light.ttf) format('truetype');
+        src: url(/assets/fonts/Nunito-Light.ttf) format('truetype');
     }
     @font-face {
         font-family: 'Nunito';
         font-style: normal;
         font-display: swap;
         font-weight: 400;
-        src: url(src/assets/fonts/Nunito-Regular.ttf) format('truetype');
+        src: url(/assets/fonts/Nunito-Regular.ttf) format('truetype');
     }
     @font-face {
         font-family: 'Nunito';
         font-style: normal;
         font-display: swap;
         font-weight: 600;
-        src: url(src/assets/fonts/Nunito-SemiBold.ttf) format('truetype');
+        src: url(/assets/fonts/Nunito-SemiBold.ttf) format('truetype');
     }
     @font-face {
         font-family: 'Nunito';
         font-style: normal;
         font-display: swap;
         font-weight: 700;
-        src: url(src/assets/fonts/Nunito-Bold.ttf) format('truetype');
+        src: url(/assets/fonts/Nunito-Bold.ttf) format('truetype');
     }
     @font-face {
         font-family: 'Nunito';
         font-style: italic;
         font-display: swap;
         font-weight: 300;
-        src: url(src/assets/fonts/Nunito-LightItalic.ttf) format('truetype');
+        src: url(/assets/fonts/Nunito-LightItalic.ttf) format('truetype');
     }
     @font-face {
         font-family: 'Nunito';
         font-style: italic;
         font-display: swap;
         font-weight: 400;
-        src: url(src/assets/fonts/Nunito-Italic.ttf) format('truetype');
+        src: url(/assets/fonts/Nunito-Italic.ttf) format('truetype');
     }
     @font-face {
         font-family: 'Nunito';
         font-style: italic;
         font-display: swap;
         font-weight: 600;
-        src: url(src/assets/fonts/Nunito-SemiBoldItalic.ttf) format('truetype');
+        src: url(/assets/fonts/Nunito-SemiBoldItalic.ttf) format('truetype');
     }
     @font-face {
         font-family: 'Nunito';
         font-style: italic;
         font-display: swap;
         font-weight: 700;
-        src: url(src/assets/fonts/Nunito-BoldItalic.ttf) format('truetype');
+        src: url(/assets/fonts/Nunito-BoldItalic.ttf) format('truetype');
     }
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     overflow-x: hidden;
 }
@@ -92,14 +94,31 @@ body {
 }
 
 .bg-dots {
-    background-image: linear-gradient(#0d0d0d, #0000), linear-gradient(#000000bf, #000000bf), url("src/assets/bg-dots.png");
+    background-image: linear-gradient(#0d0d0d, #0000), linear-gradient(#000000bf, #000000bf), url("/assets/bg-dots.png");
 }
 .bg-dots-clear {
-    background-image: linear-gradient(rgba(20, 20, 20, 0.9), rgba(10, 10, 10, 0.9)), url("src/assets/bg-dots.png");
+    background-image: linear-gradient(rgba(20, 20, 20, 0.9), rgba(10, 10, 10, 0.9)), url("/assets/bg-dots.png");
     background-position: 10%;
 }
 .bg-mesh {
-    background-image: linear-gradient(#0d0d0d, #0000), linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.8)), url("src/assets/mesh.webp");
+    background-image: linear-gradient(#0d0d0d, #0000), linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.8)), url("/assets/mesh.webp");
+}
+
+.fade-header::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, #0d0d0d, rgba(26, 26, 26, 0.5) 80%, rgba(18, 18, 18, 0.7) 100%, transparent);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    transition: all 0.3s ease;
+}
+
+.fade-header.active::before {
+    top: 0;
 }
 
 

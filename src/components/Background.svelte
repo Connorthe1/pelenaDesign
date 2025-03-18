@@ -34,13 +34,13 @@
             uniforms
         });
 
-        const geometry = new THREE.PlaneGeometry(glassEl.clientWidth / 20, glassEl.clientHeight / 25);
+        const geometry = new THREE.PlaneGeometry(window.innerWidth / 20, window.innerHeight / 25);
         const bgPlane = new THREE.Mesh(geometry, bgMaterial);
         bgPlane.position.set(0,0,-35)
         scene.add(bgPlane);
 
         // Camera position
-        const camera = new THREE.PerspectiveCamera(45, glassEl.clientWidth / glassEl.clientHeight, 0.1, 1000);
+        const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
 
         camera.position.set(0, 0, 10);
 
@@ -67,7 +67,7 @@
 
 // Create a new bloom pass
         const bloomPass = new UnrealBloomPass(
-            new THREE.Vector2(glassEl.clientWidth, glassEl.clientHeight),
+            new THREE.Vector2(window.innerWidth, window.innerHeight),
             1.5,
             0.4,
             0.85
@@ -77,7 +77,7 @@
         bloomPass.radius = bloomparams.bloomRadius;
 
         const displacementTexture = new THREE.TextureLoader().load(
-            "src/assets/displacement.png",
+            "/assets/displacement.png",
             function (texture) {
                 // By setting minFilter to THREE.NearestFilter we can prevent some tiling issues with the displacement texture
                 texture.minFilter = THREE.NearestFilter;
@@ -107,7 +107,7 @@
         let textMesh
         const fontLoader = new FontLoader();
         fontLoader.load(
-            "src/assets/font.json",
+            "/assets/font.json",
             (font) => {
                 // Создаем геометрию текста
                 const textGeometry = new TextGeometry("PELENA", {
@@ -156,10 +156,10 @@
         window.addEventListener("resize", onWindowResize);
 
         function onWindowResize() {
-            camera.aspect = glassEl.clientWidth / glassEl.clientHeight;
+            camera.aspect = window.innerWidth / window.innerHeight;
             camera.updateProjectionMatrix();
-            renderer.setSize(glassEl.clientWidth, glassEl.clientHeight);
-            composer.setSize(glassEl.clientWidth, glassEl.clientHeight);
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            composer.setSize(window.innerWidth, window.innerHeight);
         }
 
         // Анимация

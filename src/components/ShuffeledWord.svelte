@@ -12,13 +12,13 @@ onMount(() => {
     textElement.addEventListener('mouseenter', () => {
         // Запускаем перемешивание каждые 100 мс
         shuffleInterval = setInterval(() => {
-            textElement.textContent = shuffleString(originalText.length, 'AFCIJOKDSJOKF32409230FJIKSDJL312UDIK');
-        }, 80);
+            textElement.textContent = shuffleString(originalText.length, 'AfCiJoKdSjOkF3p4z9q30fJiKcDlL312UbIn');
+        }, 40);
 
         timeOut = setTimeout(() => {
             clearInterval(shuffleInterval);
             restoreText(textElement, originalText);
-        }, 400);
+        }, 300);
     });
 
     textElement.addEventListener('mouseleave', () => {

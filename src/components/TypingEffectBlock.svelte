@@ -4,7 +4,7 @@ import {onMount} from "svelte";
 let block
 onMount(() => {
     const textElement = block;
-    const words = ["DESIGN", "PRODUCT", "SITE", "GAME"];
+    const words = ["всяких штук", "мобильных приложений", "дизайнов интерфейса", "веб-сайтов", "3d моделей"];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -41,7 +41,7 @@ onMount(() => {
         charIndex = isDeleting ? charIndex - 1 : charIndex + 1;
 
         // Скорость печати и стирания
-        const typingSpeed = isDeleting ? getRandomNumber(50, 200) : getRandomNumber(100, 300);
+        const typingSpeed = isDeleting ? 50 : 100;
         setTimeout(typeEffect, typingSpeed);
     }
 
@@ -54,10 +54,7 @@ function getRandomNumber(min, max) {
 }
 </script>
 
-<span bind:this={block} class="text-pink-300 shadow-pink-300 type-line relative"></span>
+<span bind:this={block} class="text-accentColor type-line relative"></span>
 
 <style>
-span {
-    text-shadow: #FB64B6FF 1px 0 12px;
-}
 </style>

@@ -93,6 +93,12 @@ body {
     overflow: hidden;
 }
 
+@media (max-width: 400px) {
+    .glass {
+        border-width: 60px 0;
+    }
+}
+
 .bg-dots {
     background-image: linear-gradient(#0d0d0d, #0000), linear-gradient(#000000bf, #000000bf), url("/assets/bg-dots.png");
 }

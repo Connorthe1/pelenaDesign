@@ -34,7 +34,7 @@
             uniforms
         });
 
-        const geometry = new THREE.PlaneGeometry(window.innerWidth / 20, window.innerHeight / 25);
+        const geometry = new THREE.PlaneGeometry(window.innerWidth / 20, window.innerHeight / 20);
         const bgPlane = new THREE.Mesh(geometry, bgMaterial);
         bgPlane.position.set(0,0,-35)
         scene.add(bgPlane);
@@ -77,7 +77,7 @@
         bloomPass.radius = bloomparams.bloomRadius;
 
         const displacementTexture = new THREE.TextureLoader().load(
-            "/assets/displacement.png",
+            "assets/displacement.png",
             function (texture) {
                 // By setting minFilter to THREE.NearestFilter we can prevent some tiling issues with the displacement texture
                 texture.minFilter = THREE.NearestFilter;
@@ -87,7 +87,7 @@
         const displacementPass = new ShaderPass(displacementShader);
         displacementPass.uniforms["displacement"].value = displacementTexture;
         displacementPass.uniforms["scale"].value = 0.015;
-        displacementPass.uniforms["tileFactor"].value = 1.5;
+        displacementPass.uniforms["tileFactor"].value = Math.max(glassEl.clientWidth / 1000, 0.8);
 
         const renderScene = new RenderPass(scene, camera);
 
@@ -105,14 +105,18 @@
 
         // TEXT
         let textMesh
+        let textPosition = {
+            x: 0,
+            y: 0
+        }
         const fontLoader = new FontLoader();
         fontLoader.load(
-            "/assets/font.json",
+            "assets/font.json",
             (font) => {
                 // Создаем геометрию текста
-                const textGeometry = new TextGeometry("PELENA", {
+                const textGeometry = new TextGeometry("HELLO", {
                     font: font,
-                    size: 1, // Размер текста
+                    size: Math.min(glassEl.clientWidth / 1000, 1), // Размер текста
                     depth: 0.3, // Глубина текста
 
                     bevelSegments: 1, // Качество фаски
@@ -123,7 +127,12 @@
                 // textMesh = new THREE.Mesh(textGeometry, new THREE.MeshNormalMaterial());
 
                 // Размещаем текст на фоне
-                textMesh.position.set(-2.2, -0.1, 3); // Центрируем за объектами
+                textGeometry.computeBoundingBox();
+                textPosition = {
+                    x: (textGeometry.boundingBox.max.x - textGeometry.boundingBox.min.x) / 2,
+                    y: (textGeometry.boundingBox.max.y - textGeometry.boundingBox.min.y) / 2
+                }
+                textMesh.position.set(0 -textPosition.x,0 -textPosition.y, 3); // Центрируем за объектами
                 scene.add(textMesh);
             }
         );
@@ -145,8 +154,8 @@
             if (!mesh) return;
 
             // Обновляем положение или вращение объекта
-            mesh.position.y += -0.015 + (-mouseY * intensity - mesh.position.y) * 0.1;
-            mesh.position.x += -0.22 + (-mouseX * intensity - mesh.position.x) * 0.1;
+            mesh.position.y += -textPosition.y + (-mouseY * intensity - mesh.position.y);
+            mesh.position.x += -textPosition.x + (-mouseX * intensity - mesh.position.x);
 
             // Дополнительно можно изменять позицию объекта:
             // mesh.position.x += (mouseX * intensity - mesh.position.x) * 0.1;

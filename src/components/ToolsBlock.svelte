@@ -3,21 +3,21 @@
     import ShuffeledWord from "./ShuffeledWord.svelte";
 </script>
 
-<div class="text-xl flex flex-col gap-4 py-8 px-12 font-roboto text-white mt-4 relative overflow-clip tracking-widest rounded-md mx-[80px] bg-dots-clear group">
+<div class="text-xl flex flex-col gap-4 py-8 px-[20px] xl:px-12 font-roboto text-white mt-4 relative overflow-clip tracking-widest xl:rounded-md bg-dots-clear group">
     <p class="text-xs opacity-50">WORKING TOOLS</p>
-    <div class="flex gap-6 filter grayscale group-hover:grayscale-0 transition duration-300 items-center">
-        <img src="/assets/tools/figma.svg" class="w-12 h-12" alt="">
-        <img src="/assets/tools/js.svg" class="w-12 h-12" alt="">
-        <img src="/assets/tools/vue.svg" class="w-12 h-12" alt="">
-        <img src="/assets/tools/svelte.svg" class="w-12 h-12" alt="">
-        <img src="/assets/tools/pixi.svg" class="h-10" alt="">
-        <img src="/assets/tools/nodejs.svg" class="h-12" alt="">
-        <img src="/assets/tools/photoshop.svg" class="h-12" alt="">
-        <img src="/assets/tools/ue.svg" class="h-12" alt="">
-        <img src="/assets/tools/tailwind.svg" class="h-6" alt="">
-        <img src="/assets/tools/blender.svg" class="h-12" alt="">
+    <div class="flex flex-wrap gap-6 filter grayscale group-hover:grayscale-0 transition duration-300 items-center">
+        <img src="assets/tools/figma.svg" class="w-12 h-12" alt="">
+        <img src="assets/tools/js.svg" class="w-12 h-12" alt="">
+        <img src="assets/tools/vue.svg" class="w-12 h-12" alt="">
+        <img src="assets/tools/svelte.svg" class="w-12 h-12" alt="">
+        <img src="assets/tools/pixi.svg" class="h-10" alt="">
+        <img src="assets/tools/nodejs.svg" class="h-12" alt="">
+        <img src="assets/tools/photoshop.svg" class="h-12" alt="">
+        <img src="assets/tools/ue.svg" class="h-12" alt="">
+        <img src="assets/tools/tailwind.svg" class="h-6" alt="">
+        <img src="assets/tools/blender.svg" class="h-12" alt="">
     </div>
-    <img src="/assets/3D%20Abstract3_%20(9).png" class="hidden 2xl:block absolute right-[80px] -top-36 h-64 saturate-0 group-hover:saturate-150 transition duration-300" alt="">
+    <img src="assets/3D%20Abstract3_%20(9).png" class="hidden 2xl:block absolute right-[80px] -top-36 h-64 saturate-0 group-hover:saturate-150 transition duration-300" alt="">
     <div class="absolute right-0 top-0 h-full flex flex-col">
         <div class="w-1 bg-amber-500 flex-1"></div>
         <div class="w-1 bg-cyan-500 flex-1"></div>

@@ -62,9 +62,11 @@
 }
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 body {
     overflow-x: hidden;
+    background: #0d0d0d;
 }
 .type-line::after {
     content: '';

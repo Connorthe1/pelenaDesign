@@ -54,7 +54,19 @@ function getRandomNumber(min, max) {
 }
 </script>
 
-<span bind:this={block} class="text-accentColor type-line relative"></span>
+<span bind:this={block} class="gradient-text type-line relative"></span>
 
 <style>
+    .gradient-text {
+        background: linear-gradient(to bottom, #f4eec8, #ed6b3b);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+
+        text-shadow: 2px 2px 10px rgba(255, 59, 147, 0.3),
+        4px 4px 20px rgba(237, 107, 59, 0.4);
+
+        transition: 0.2s;
+    }
 </style>

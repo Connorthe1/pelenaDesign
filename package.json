@@ -4,14 +4,14 @@
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
-		"dev": "vite dev",
+		"dev": "vite dev --host",
 		"build": "vite build",
 		"preview": "vite preview",
 		"deploy": "gh-pages -d build -t"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-static": "^3.0.5",
 		"@sveltejs/adapter-auto": "^4.0.0",
+		"@sveltejs/adapter-static": "^3.0.5",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^4.0.0",
 		"autoprefixer": "^10.4.20",
@@ -23,6 +23,7 @@
 	"dependencies": {
 		"gh-pages": "^6.3.0",
 		"leva": "^0.9.35",
+		"svelte-inview": "^4.0.4",
 		"three": "^0.172.0"
 	}
 }

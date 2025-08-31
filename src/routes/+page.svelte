@@ -1,37 +1,23 @@
 <script>
-
-import "../app.css";
-import CaseBlock from "../components/CaseBlock.svelte";
-import Footer from "../components/Footer.svelte";
-import Navigation from "../components/Navigation.svelte";
-import ToolsBlock from "../components/ToolsBlock.svelte";
-import MainSectionNew from "../components/MainSectionNew.svelte";
-
+    import "../app.css";
+    import Footer from "../components/Footer.svelte";
+    import Navigation from "../components/Navigation.svelte";
+    import MainSectionNew from "../components/MainSectionNew.svelte";
+    import WorkBlock from "../components/WorkBlock.svelte";
 </script>
 
-<Navigation />
-<main id="main" class="w-full h-full flex flex-col bg-mainBlack pt-[80px]">
-    <section class="mb-12">
-        <MainSectionNew />
+<Navigation/>
+<main id="main" class="h-full flex flex-col pt-[100px] xl:pt-[120px]">
+    <div class="absolute px-1 py-3 rounded-full border border-white/25 bg-white/15 shadow-lg backdrop-blur-[2px] bottom-10 self-center animate-bounce">
+        <img src="/assets/ArrowDown.svg" class="w-6 h-5 filter invert" alt="">
+    </div>
+    <section class="mb-8 xl:mb-20 max-w-work xl:w-full mx-4 xl:mx-auto">
+        <MainSectionNew/>
     </section>
 
-    <section class="py-2 gap-4 z-10 px-global">
-<!--        <ContactBlock />-->
-<!--        <div class="flex justify-between items-center xl:items-end px-[20px] xl:px-[80px] mt-6">-->
-<!--            <h2 class="text-white text-[24px] xl:text-[32px]">Design and Front-End</h2>-->
-<!--            <img src="assets/FW-SHAPE-39.svg" class="opacity-20 h-4" alt="">-->
-<!--        </div>-->
+    <WorkBlock/>
 
-        <div class="grid grid-cols-3 gap-4">
-            <div class="flex flex-col"> <CaseBlock title="SOON"/></div>
-            <div class="flex flex-col"> <CaseBlock title="SOON"/></div>
-            <div class="flex flex-col"> <CaseBlock title="SOON"/></div>
-        </div>
-
-        <ToolsBlock />
-    </section>
-
-    <Footer />
+    <Footer/>
 </main>
 
 <style lang="postcss">

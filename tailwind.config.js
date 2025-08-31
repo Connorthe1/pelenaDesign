@@ -13,7 +13,7 @@ export default {
         mainBlack: '#0d0d0d',
         blackElem: '#111111',
         white: '#ededed',
-        accentColor: '#fa8072'
+        accentColor: '#ed6b3b'
       },
       spacing: {
         'work': '1400px'

@@ -1,4 +1,4 @@
-<section class="h-svh bg-black bg-opacity-95 py-2 gap-4 relative flex flex-col items-center justify-between text-white bg-dots">
+<section id="contacts" class="h-svh bg-black bg-opacity-95 py-2 gap-4 relative flex flex-col items-center justify-between text-white bg-dots">
     <div></div>
     <a href="#main" class="text-white text-[40px] xl:text-[100px] flex items-center gap-4 xl:gap-16 hover:italic">
         <span class="leading-none">PELENA</span>
@@ -32,6 +32,10 @@
             <li class="flex gap-6">
                 <span>04.</span>
                 <a href="assets/resume.pdf" class="hover:italic" target="_blank">RESUME</a>
+            </li>
+            <li class="flex gap-6">
+                <span>05.</span>
+                <a href="https://github.com/Connorthe1" class="hover:italic" target="_blank">GITHUB</a>
             </li>
         </ul>
         <div class="text-right">

@@ -52,16 +52,16 @@
 
 <div style="transform: translate({offsetX}px, {offsetY}px) rotateX({rotateX}deg) rotateY({rotateY}deg);" class="flex xl:grid xl:grid-cols-2 xl:grid-rows-2 mt-6 xl:mt-0 gap-4 xl:mr-20" >
     <a href="https://t.me/connorthe1" target="_blank" class="glass-border w-16 h-16 xl:w-20 xl:h-20 p-3 bg-white/15 transition-all duration-300 ease-in-out hover:-translate-x-2 hover:-rotate-6 flex items-center justify-center">
-        <img src="/assets/TG.svg" class="filter invert opacity-90" alt="">
+        <img src="assets/TG.svg" class="filter invert opacity-90" alt="">
     </a>
     <a href="https://www.linkedin.com/in/andrew-melnik/" target="_blank" class="glass-border w-16 h-16 xl:w-20 xl:h-20 p-3 bg-white/15 transition-all duration-300 ease-in-out hover:translate-x-2 hover:rotate-6 flex items-center justify-center">
-        <img src="/assets/linkedin.svg" class="filter invert opacity-90" alt="">
+        <img src="assets/linkedin.svg" class="filter invert opacity-90" alt="">
     </a>
     <a href="mailto:andrew_muller@vk.com" target="_blank" class="glass-border w-16 h-16 xl:w-20 xl:h-20 p-3 bg-white/15 transition-all duration-300 ease-in-out hover:-translate-x-2 hover:-rotate-6 flex items-center justify-center">
-        <img src="/assets/mail.svg" class="filter invert opacity-90" alt="">
+        <img src="assets/mail.svg" class="filter invert opacity-90" alt="">
     </a>
     <a href="assets/resume.pdf" target="_blank" class="glass-border w-16 h-16 xl:w-20 xl:h-20 p-3 bg-white/15 transition-all duration-300 ease-in-out hover:translate-x-2 hover:rotate-6 flex items-center justify-center">
-        <img src="/assets/resume.svg" class="opacity-90 w-10" alt="">
+        <img src="assets/resume.svg" class="opacity-90 w-10" alt="">
     </a>
 </div>
 

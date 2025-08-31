@@ -11,10 +11,10 @@
 
     <div class="hidden xl:flex items-center gap-6 justify-self-end">
         <a href="https://t.me/connorthe1" target="_blank" class="opacity-80 hover:opacity-100 transition">
-            <img src="/assets/TG.svg" class="w-8 h-8 filter invert" alt="">
+            <img src="assets/TG.svg" class="w-8 h-8 filter invert" alt="">
         </a>
         <a href="https://www.linkedin.com/in/andrew-melnik/" class="opacity-80 hover:opacity-100 transition">
-            <img src="/assets/linkedin.svg" class="w-8 h-8 filter invert" alt="">
+            <img src="assets/linkedin.svg" class="w-8 h-8 filter invert" alt="">
         </a>
     </div>
 
